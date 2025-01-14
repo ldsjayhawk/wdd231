@@ -90,16 +90,26 @@ const courses = [
     }
 ]
 
+let buttonText = ''
 function createCourseCard(coursefilter) {
     const coursecard = document.getElementById('coursecard');
-    coursecard.innerHTML = '';
     coursefilter.forEach(function (course) {
-            coursecard.innerHTML += 
-            `<div class="course">
-            <h3>${course.subject} ${course.number}</h3>
-            </div>`;
+        if (course.completed === true) {
+                coursecard.innerHTML += 
+                `<div class="course">
+                <h3>${course.subject} ${course.number}</h3>
+                </div>`
+            } else {
+                coursecard.innerHTML += 
+                `<div class="course-false">
+                <h3>${course.subject} ${course.number}</h3>
+                </div>`;
+            }
         });
     }
+
+    coursecard.innerHTML = buttonText;
+
 
     // function createCreditStatement(coursefilter) {
     //     const creditstatement = document.getElementById('creditstatement');
