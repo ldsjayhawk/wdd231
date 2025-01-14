@@ -96,7 +96,7 @@ function createCourseCard(coursefilter) {
     coursefilter.forEach(function (course) {
             coursecard.innerHTML += 
             `<div class="course">
-            <h4>${course.subject} ${course.number}</h4>
+            <h3>${course.subject} ${course.number}</h3>
             </div>`;
         });
     }
