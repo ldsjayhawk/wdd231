@@ -4,8 +4,8 @@ const hamburger = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
 
 hamburger.addEventListener('click', () => {
-	navigation.classList.toggle('open');
-	hamburger.classList.toggle('open');
+    navigation.classList.toggle('open');
+    hamburger.classList.toggle('open');
 });
 
 // course list
@@ -93,54 +93,55 @@ const courses = [
 let buttonText = ''
 function createCourseCard(coursefilter) {
     const coursecard = document.getElementById('coursecard');
+    coursecard.innerHTML = '';
     coursefilter.forEach(function (course) {
         if (course.completed === true) {
-                coursecard.innerHTML += 
+            coursecard.innerHTML +=
                 `<div class="course">
                 <h3>${course.subject} ${course.number}</h3>
                 </div>`
-            } else {
-                coursecard.innerHTML += 
+        } else {
+            coursecard.innerHTML +=
                 `<div class="course-false">
                 <h3>${course.subject} ${course.number}</h3>
                 </div>`;
-            }
-        });
-    }
-
-    coursecard.innerHTML = buttonText;
-
-
-    // function createCreditStatement(coursefilter) {
-    //     const creditstatement = document.getElementById('creditstatement');
-    //     creditstatement.innerHTML = '';
-    //     coursefilter.forEach(function (course) {
-    //             creditstatement.innerHTML +=
-    //             let creditSum;
-    //             creditSum += course.credits;
-    //             `<p>The total number of credits is ${creditSum}</p>`;
-    //         });
-    //     }
-
-    createCourseCard(courses); 
-
-    const cse = document.querySelector("#cse")
-    cse.addEventListener("click", () => {
-        const csecourse = courses.filter(course => course.subject == "CSE");
-        createCourseCard(csecourse);
-    });	
-
-
-    const wdd = document.querySelector("#wdd")
-    wdd.addEventListener("click", () => {
-        const wddcourse = courses.filter(course => course.subject == "WDD");
-        createCourseCard(wddcourse);
+        }
     });
+}
 
-    const all = document.querySelector("#all")
-    all.addEventListener("click", () => {
-        createCourseCard(courses); 
-    });
+coursecard.innerHTML = buttonText;
+
+
+// function createCreditStatement(coursefilter) {
+//     const creditstatement = document.getElementById('creditstatement');
+//     creditstatement.innerHTML = '';
+//     coursefilter.forEach(function (course) {
+//             creditstatement.innerHTML +=
+//             let creditSum;
+//             creditSum += course.credits;
+//             `<p>The total number of credits is ${creditSum}</p>`;
+//         });
+//     }
+
+createCourseCard(courses);
+
+const cse = document.querySelector("#cse")
+cse.addEventListener("click", () => {
+    const csecourse = courses.filter(course => course.subject == "CSE");
+    createCourseCard(csecourse);
+});
+
+
+const wdd = document.querySelector("#wdd")
+wdd.addEventListener("click", () => {
+    const wddcourse = courses.filter(course => course.subject == "WDD");
+    createCourseCard(wddcourse);
+});
+
+const all = document.querySelector("#all")
+all.addEventListener("click", () => {
+    createCourseCard(courses);
+});
 
 // copyright year
 const d = new Date();
