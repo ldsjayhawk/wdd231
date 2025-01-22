@@ -1,0 +1,32 @@
+@media screen and (min-width: 500px) {
+
+#menu {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    justify-content: flex-end;
+}
+
+.navigation li {
+    display: block;
+}
+
+.navigation a {
+    background-color: #000;
+    border: #fff solid 2px;
+    border-radius: 10px;
+}
+
+.navigation a:hover {
+    background-color: darkgreen;
+}
+
+.navigation ul {
+    display: flex;
+    flex: 1 1 100%;
+}
+}

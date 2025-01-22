@@ -1,0 +1,60 @@
+{
+    "members" : [
+        {
+            "company" : "Shamrock",
+            "address" : "1",
+            "phone" : 4,
+            "url" : false,
+            "image" : "images/shamrock.png",
+            "membership" : 2
+        },
+        {
+            "company" : "Black & Veatch",
+            "address" : "2",
+            "phone" : 4,
+            "url" : false,
+            "image" : "images/bv.png",
+            "membership" : 3
+        },
+        {
+            "company" : "Advent Health",
+            "address" : "2015-11-01",
+            "phone" : 4,
+            "url" : false,
+            "image" : "images/advent.png",
+            "membership" : 3
+        },
+        {
+            "company" : "Central Bank",
+            "address" : "2015-11-01",
+            "phone" : 4,
+            "url" : false,
+            "image" : "images/central-bank.png",
+            "membership" : 2
+        },
+        {
+            "company" : "Taco Naco",
+            "address" : "2015-11-01",
+            "phone" : 4,
+            "url" : false,
+            "image" : "images/taco-naco.png",
+            "membership" : 1
+        },
+        {
+            "company" : "Quiktrip",
+            "address" : "2015-11-01",
+            "phone" : 4,
+            "url" : false,
+            "image" : "images/qt.png",
+            "membership" : 3
+        },
+        {
+            "company" : "Heartland Soccer Association",
+            "address" : "2015-11-01",
+            "phone" : 4,
+            "url" : false,
+            "image" : "images/heartland.png",
+            "membership" : 1
+        }
+    ]
+}
