@@ -1,5 +1,18 @@
-/* ...all pages... */
+
+@media screen and (min-width: 500px) {
+
+    .hero article {
+        top: 13%;
+        left: 10%;
+        width: 45%;
+        height: 10%;
+    }
+    
+
+}
+
 @media screen and (min-width: 768px) {
+
 
 #menu {
     display: none;
@@ -33,7 +46,7 @@
 /* ...home page... */
 
 
-.hero article p {
+.hero article h2 {
     font-family: var(--heading-font);
     font-size: 1.5em;
     font-weight: 700;
@@ -53,18 +66,3 @@
 
 }
 
-@media screen and (min-width: 600px) {
-
-    .hero article {
-        top: 13%;
-        left: 10%;
-        width: 45%;
-        height: 10%;
-    }
-    
-    /* .hero article p {
-        font-family: var(--heading-font);
-        font-size: 1em;
-        font-weight: 700;
-    } */
-}

@@ -165,9 +165,9 @@ footer h4, p, a {
     box-sizing: border-box;
     }
 
-.hero article p {
+.hero article h2 {
     font-family: var(--heading-font);
-    font-size: 1em;
+    font-size: .7em;
     font-weight: 700;
 }
 
