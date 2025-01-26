@@ -59,6 +59,10 @@ main p {
     content: "❌";
 }
 
+.active::before {
+    content: "➲ ";
+}
+
 .navigation {
     display: flex;
     flex-direction: column;
@@ -87,9 +91,8 @@ main p {
 
 .navigation.open {
     background-color: darkgreen;
-    align-items: center;
     justify-content: center;
-    margin: auto;
+    padding: 10px;
     flex: 1;
 }
 
@@ -149,6 +152,30 @@ footer h4, p, a {
     padding: 10px;
 }
 
+.hero article {
+    position: absolute;
+    background-color: #DAF7FF;
+    z-index: 3;
+    top: 20%;
+    left: 15%;
+    width: 45%;
+    height: 18%;
+    padding-top: .8em;
+    opacity: .8;
+    box-sizing: border-box;
+    }
+
+.hero article p {
+    font-family: var(--heading-font);
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.action a {
+    color: blue;
+    font-family: var(--heading-font);
+}
+
 h3 {
     background-color: #000;
     color: #fff;
@@ -156,6 +183,8 @@ h3 {
     padding: 5px;
     text-align: center;
 }
+
+
 
 figcaption {
     font-family: var(--paragraph-font);
