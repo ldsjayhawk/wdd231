@@ -1,0 +1,43 @@
+/* ...all pages... */
+@media screen and (min-width: 768px) {
+
+#menu {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    justify-content: flex-end;
+}
+
+.navigation li {
+    display: block;
+}
+
+.navigation a {
+    color: #000;
+}
+
+.navigation a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.navigation ul {
+    display: flex;
+    flex: 1 1 100%;
+}
+
+/* ...home page... */
+
+.info-box {
+    flex-direction: row;
+}
+
+.weather-box {
+    flex-direction: row;
+}
+
+}

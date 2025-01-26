@@ -1,30 +1,3 @@
-// responsive menu
-
-const hamburger = document.querySelector('#menu');
-const navigation = document.querySelector('.navigation');
-
-hamburger.addEventListener('click', () => {
-    navigation.classList.toggle('open');
-    hamburger.classList.toggle('open');
-});
-
-// weather
-const temp = 75;
-const condition = 'Clear';
-const high = 85;
-const low = 52;
-const humidity = 34;
-const sunrise = '7:30am';
-const sunset = '9:59pm';
-
-document.getElementById("temp").innerHTML = temp;
-document.getElementById("condition").innerHTML = condition;
-document.getElementById("high").innerHTML = high;
-document.getElementById("low").innerHTML = low;
-document.getElementById("humidity").innerHTML = humidity;
-document.getElementById("sunrise").innerHTML = sunrise;
-document.getElementById("sunset").innerHTML = sunset;
-
 // get member data
 const jsonFile = 'data/members.json';
 const cards = document.querySelector('#cards');
@@ -45,7 +18,8 @@ getMemberData(jsonFile);
 // member card creator
 
 const displayMembers = (members) => {
-    members.forEach((member) => { addElement(member)
+    members.forEach((member) => {addElement(member)
+    })
     };
 
 
@@ -85,21 +59,3 @@ function addElement(member) {
 //         } 
 //     });
 // }
-
-// copyright year
-const d = new Date();
-let currentyear = d.getFullYear();
-document.getElementById("currentyear").innerHTML = currentyear;
-
-// set last modified date options
-const options = {
-    hour12: false,
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    hour: "numeric",
-    minute: "numeric"
-};
-
-// create last modified date variable
-lastModified.innerHTML = new Date().toLocaleDateString("en-US", options);
