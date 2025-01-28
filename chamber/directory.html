@@ -20,14 +20,14 @@
         rel="stylesheet">
 
     <!-- javascript reference links -->
-    <script src="scripts/home.js" type="module"></script>
-    <script src="scripts/weather.mjs" type="module"></script>
-    <script src="scripts/forecast.mjs" type="module"></script>
+    <script src="scripts/directory.js" type="module"></script>
+    <!-- <script src="scripts/weather.mjs" type="module"></script>
+    <script src="scripts/forecast.mjs" type="module"></script> -->
     <script src="scripts/footer.mjs" type="module"></script>
 
     <!-- css reference links -->
-    <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="styles/home-large.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/directory-large.css">
 
     <!-- other styling -->
     <link rel="icon" href="opfavicon.ico">
@@ -65,8 +65,17 @@
                 <figcaption>PrairieFire Museum - Overland Park, KS</figcaption>
             </figure>
         </div> -->
-        <h2>Directory</h2>
- 
+        <section>
+            <h2>Directory</h2>
+            <ul class="selection">
+                <li><a href="#" id="grid">Grid</a></li>
+                <li><a href="#" id="list">List</a></li>
+            </ul>
+        </section>
+            <div class="card">
+                <span id="membercard"></span>
+            </div>  
+        </section>
     </main>
     <footer>
         <div class="footer-container">

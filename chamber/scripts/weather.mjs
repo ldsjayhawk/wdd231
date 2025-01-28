@@ -1,3 +1,5 @@
+// import { apiFetch } from "./fetch.mjs";
+
 const currentTemp = document.querySelector('#current-temp');
 const highTemp = document.querySelector('#high');
 const today = document.querySelector('#today-temp');
@@ -16,6 +18,7 @@ export async function apiFetch() {
             const data = await response.json();
             console.log(data)
             displayResults(data);
+            return data
         } else {
             throw Error(await response.text());
         }
@@ -27,6 +30,8 @@ export async function apiFetch() {
 // function convertTimestamp (timestamp) {
 //     const date = new Date(timestamp * 1000); // Convert to milliseconds
 // }
+
+
 
 function displayResults(data) {
     currentTemp.innerHTML = `${Math.round(data.main.temp)}`

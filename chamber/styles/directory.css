@@ -1,3 +1,5 @@
+/* ...all pages... */
+
 :root {
     --heading-font: Rokkitt, serif;
     --paragraph-font: Manjari, sans-serif;
@@ -25,22 +27,20 @@ h1 {
     flex: 1;
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5{
     font-family: var(--heading-font);
-    color:#000;
 }
 
-h3 {
-    background-color: #000;
-    color: #fff;
-    margin: 0 0 10px 0;
-    padding: 5px;
-    font-family: var(--heading-font);
-    text-align: center;
+h2 {
+    color:#000;
+    margin: 0 0 0 20px;
+    padding-top: 5px;
 }
+
 
 main p {
     font-family: var(--paragraph-font);
+    color: #000;
 }
 
 #menu {
@@ -60,12 +60,19 @@ main p {
     content: "❌";
 }
 
+.active::before {
+    content: "➲ ";
+}
+
 .navigation {
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
     margin: 0 auto;
     max-width: 500px;
     padding-top: 20px;
     color: #fff;
+    float: right;
 }
 
 .navigation li {
@@ -79,16 +86,14 @@ main p {
 .navigation a {
     color: white;
     display: block;
-    /* text-align: center; */
     padding: 1rem;
     text-decoration: none;
 }
 
 .navigation.open {
     background-color: darkgreen;
-    align-items: center;
     justify-content: center;
-    margin: auto;
+    padding: 10px;
     flex: 1;
 }
 
@@ -103,62 +108,6 @@ nav a {
     border-radius: 10px;
 }
 
-.hero-image {
-    img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 10px;
-      }
-}
-
-figcaption {
-    text-align: center;
-    font-family: var(--paragraph-font);
-    font-size: .85em
-}
-
-.flex-item {
-    padding: 10px;
-    border: #000 solid 2px;
-    justify-content: space-evenly;
-    margin: 0 auto;
-    width: 30%;
-}
-
-.weather p, .forecast p {
-    color:#000;
-}
-
-.forecast p {
-    padding-bottom: 20px;
-}
-
-#condition {
-    padding-bottom: 10px;
-}
-
-.info {
-    display: flex;
-    flex-wrap: nowrap;
-    flex: auto;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: stretch;
-    gap: 5px;
-    margin-bottom: 10px;
-}
-
-
-/* .info {
-    display: flex;
-    flex-wrap: nowrap;
-    flex: auto;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: stretch;
-} */
-
 .footer-container {
     display: flex;
     flex-wrap: nowrap;
@@ -170,13 +119,6 @@ figcaption {
     padding: 10px;
 }
 
-.flex-item {
-    padding: 10px;
-    justify-content: space-evenly;
-    margin: 0 auto;
-    width: 30%;
-}
-
 .social {
     align-items: center;
 }
@@ -186,9 +128,81 @@ footer {
     background-color: darkgreen;
 }
 
-footer h4,p,a {
+footer h4, p, a {
     color: #fff;
     padding: 0;
     margin: 0;
     font-family: var(--paragraph-font);
+}
+
+/* ...directory page... */
+
+/* .flex-box {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: space-around;
+    gap: 5px;
+    align-items: stretch;
+    color: #000;
+} */
+
+.selection ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    list-style-type: none;
+    justify-content: center;
+    gap: 5px;
+    flex: 1;
+    list-style-type: none;
+    align-items: stretch;
+}
+
+.selection li {
+    display: block;
+}
+
+.selection a {
+    text-decoration: none;
+    color: #000;
+    background-color: #DAF7FF;
+    padding: 10px;
+    /* display: block; */
+    border-radius: 10px;
+}
+
+.selection a:hover {
+    font-weight: 700;
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.card {
+    display: grid;
+    padding: 10px;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px; /* Space between columns */
+    text-align: center; /* Center text in each item */
+    grid-template-columns: auto;
+}
+
+#membercard {
+    border-color: #fff; 
+    max-width: 300px;
+}
+
+.member {   
+    background-color: #DAF7FF;
+    padding: 10px;
+    box-shadow: 0 0 10px #000;
+}
+
+.member img {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 0 10px #646464;
+    margin: 10px;
 }

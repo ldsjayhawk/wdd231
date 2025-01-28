@@ -1,61 +1,58 @@
+// import statements
+// import { apiFetch } from "./weather.mjs";
+// import { forecastFetch } from "./forecast.mjs";
+import { copyrightYear, lastModifiedDate } from "./footer.mjs";
+// import { hamburgerMenu } from "./menu.mjs";
+
+
 // get member data
 const jsonFile = 'data/members.json';
-const cards = document.querySelector('#cards');
-let results = null;
+const membercard = document.getElementById('membercard');
+let memberdata = [];
 
 async function getMemberData(jsonFile) {
-    const response = await fetch(jsonFile)
-    // wait for response
-    if (response.ok) {
-    // wait for json
-        const data = await response.json();
-        displayMembers(data.members);
-    }
+    try {
+        const response = await fetch(jsonFile)
+        // wait for response
+        if (response.ok) {
+            // wait for json
+            const data = await response.json();
+            console.log(data)
+            memberdata = data;
+            displayMembers(memberdata, "grid");
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+            console.log("Error retreiving data", error);
+        }
 }
 
+function displayMembers(data) {
+    data.forEach(member =>  {
+        membercard.innerHTML +=             
+        `<div class="member">
+        <h3>${member.company}</h3>
+        <img src="${member.image}" alt="company logo" width="100" height="auto">
+        <h4>Email: ${member.email}</p>
+        <h4>Phone: ${member.phone}</p>
+        <h4>${member.url}</p>
+        </div>`
+        } 
+    );
+}
+
+const grid = document.querySelector("#grid");
+grid.addEventListener("click", () => {
+    displayMembers(memberdata, "grid"); 
+});
+
+const list = document.querySelector("#list");
+list.addEventListener("click", () => {
+    displayMembers(memberdata, "list"); 
+});
+
 getMemberData(jsonFile);
-
-// member card creator
-
-const displayMembers = (members) => {
-    members.forEach((member) => {addElement(member)
-    })
-    };
-
-
-function addElement(member) {
-    // create a new div element
-    const newDiv = document.createElement("div");
-
-    // and give it some content
-    const newContent = `<h4>${member.company}</h4>
-                        ${member.image}
-                        <h5>EMAIL</h5><p>${member.email}</p>
-                        <h5>Phone</h5><p>${member.phone}</p>
-                        <h5>jsonFile</h5><p>${member.jsonFile}</p>`
-
-    // add the text node to the newly created div
-    newDiv.appendChild(newContent);
-
-    // add the newly created element and its content into the DOM
-    const currentDiv = document.getElementById("memberCard");
-    document.body.insertBefore(newDiv, currentDiv);
-};
-
-
-// function createMembercard(memberfilter) {
-//     const membercard = document.getElementById('membercard');
-//     membercard.innerHTML = '';
-//     memberfilter.forEach(function (member) {
-//         (member.completed === true) {
-//             membercard.innerHTML +=
-//                 `<div class="member">
-//                 <h4>${member.company}</h4>
-//                 ${member.image}
-//                 <h5>EMAIL</h5><p>${member.email}</p>
-//                 <h5>Phone</h5><p>${member.phone}</p>
-//                 <h5>jsonFile</h5><p>${member.jsonFile}</p>
-//                 </div>`
-//         } 
-//     });
-// }
+// footer info
+copyrightYear();
+lastModifiedDate();
