@@ -1,6 +1,6 @@
-    [
+    { "members": [
         {
-            "company" : "Shamrock",
+            "name" : "Shamrock",
             "address" : "9300 Metcalf Ave, Overland Park, KS 66212",
             "phone" : "913-310-2221",
             "url" : "https://shamrocktradingcorp.com/",
@@ -8,7 +8,7 @@
             "membership" : 2
         },
         {
-            "company" : "Black & Veatch",
+            "name" : "Black & Veatch",
             "address" : "11401 Lamar Ave, Overland Park, KS 66211",
             "phone" : "913-458-2000",
             "url" : "https://www.bv.com/en-US",
@@ -16,7 +16,7 @@
             "membership" : 3
         },
         {
-            "company" : "Advent Health",
+            "name" : "Advent Health",
             "address" : "9100 W 74th St, Merriam, KS 66204",
             "phone" : "913-676-2000",
             "url" : "https://www.adventhealth.com/",
@@ -24,7 +24,7 @@
             "membership" : 3
         },
         {
-            "company" : "Central Bank",
+            "name" : "Central Bank",
             "address" : "7840 Metcalf Ave, Overland Park, KS 66204",
             "phone" : "866-236-8744",
             "url" : "https://www.centralbank.net/",
@@ -32,7 +32,7 @@
             "membership" : 2
         },
         {
-            "company" : "Taco Naco",
+            "name" : "Taco Naco",
             "address" : "8220 Metcalf Avenue, Overland Park, KS, USA 66204",
             "phone" : "913-730-8565",
             "url" : "https://taconacokc.com/",
@@ -40,7 +40,7 @@
             "membership" : 1
         },
         {
-            "company" : "Quiktrip", 
+            "name" : "Quiktrip", 
             "address" : "5725 Foxridge Dr, Mission, KS 66202",
             "phone" : "913-362-3700",
             "url" : "https://www.quiktrip.com/",
@@ -48,7 +48,7 @@
             "membership" : 3
         },
         {
-            "company" : "Heartland Soccer Association",
+            "name" : "Heartland Soccer Association",
             "address" : "6450 Sprint Pkwy Suite A, Overland Park, KS 66211",
             "phone" : "913-888-8768",
             "url" : "https://www.heartlandsoccer.net/",
@@ -56,3 +56,4 @@
             "membership" : 1
         }
     ]
+}

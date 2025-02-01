@@ -186,20 +186,14 @@ footer h4, p, a {
     border-radius: 10px;
 }
 
-.card {
+.card-container {
     display: grid;
     padding: 10px;
     align-items: stretch;
     justify-content: center;
-    gap: 20px; /* Space between columns */
-    text-align: center; /* Center text in each item */
-    grid-template-columns: auto;
-}
-
-#membercard {
-    border-color: #fff; 
-    max-width: 300px;
     gap: 20px;
+    text-align: center;
+    grid-template-columns: auto auto auto;
 }
 
 .member {   
@@ -207,6 +201,14 @@ footer h4, p, a {
     padding: 10px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px #000;
+}
+
+.member a { 
+    color: blue;
+}
+
+.member a:visited { 
+    color: blue;
 }
 
 .member img {
