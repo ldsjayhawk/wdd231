@@ -104,15 +104,6 @@ main {
     max-width: 90%;
 }
 
-main img {
-    width: 150px;
-    height: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 10px gray;
-    display: block;
-}
-
 figcaption {
     text-align: center;
 }
@@ -139,12 +130,25 @@ figcaption {
     grid-column: 1/1;
 }
 
+.card2 img {
+    margin: auto;
+    animation-name: fadeIn 30s ease-in-out;
+
+    @keyframes fadeIn {
+        from { opacity: 0; } 
+        to { opacity: 1; } 
+    }
+}
+
+
 .card3 {
     border: 3px solid #969696;
-    margin: 10px 0 10px 7%;
+    margin: 10px 0 10px 0;
     box-shadow: 0 0 10px #404040;
     grid-column: 1/1;
 }
+
+
 
 .filter-buttons ul {
     text-align: center;
@@ -203,6 +207,49 @@ figcaption {
     box-shadow: 0 0 10px #404040;
     padding: 0px 70px;
     margin: 10px 0px 10px 0px;
+}
+
+dialog {
+    border: solid 2px darkgreen;
+    box-shadow: 0 0 10px gray;
+    padding: 0 1rem 1rem 1rem;
+    width: 60%;
+    height: 65%;
+    max-width: 500px;
+    position: fixed;
+    z-index: 1;
+}
+
+dialog h3 {
+    background-color: #04046f;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+dialog h4 {
+    text-align: center;
+}
+
+::backdrop {
+    background-color: gray;
+    opacity: .8;
+}
+
+#closebutton {
+    position: absolute;
+    bottom: 0%;
+    right: 40%;
+    padding: 10px;
+    margin: 15px 0 15px 0;
+    border: solid 1px #000;
+    width: 100px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#course:hover {
+    background-color: darkgreen;
 }
 
 footer {

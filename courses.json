@@ -1,0 +1,50 @@
+[
+    {
+        "courseNum" : "Web Fundamentals",
+        "title" : "Web Fundamentals",
+        "credits" : 2,
+        "certificate" : "Web and Computer Programming",
+        "description" : "this course introduces...",
+        "stack" : "HTML, CSS"
+    },
+    {
+        "courseNum" : "Web Fundamentals",
+        "title" : "Web Fundamentals",
+        "credits" : 2,
+        "certificate" : "Web and Computer Programming",
+        "description" : "this course introduces...",
+        "stack" : "HTML, CSS"
+    },
+    {
+        "courseNum" : "Web Fundamentals",
+        "title" : "Web Fundamentals",
+        "credits" : 2,
+        "certificate" : "Web and Computer Programming",
+        "description" : "this course introduces...",
+        "stack" : "HTML, CSS"
+    },
+    {
+        "courseNum" : "Web Fundamentals",
+        "title" : "Web Fundamentals",
+        "credits" : 2,
+        "certificate" : "Web and Computer Programming",
+        "description" : "this course introduces...",
+        "stack" : "HTML, CSS"
+    },
+    {
+        "courseNum" : "Web Fundamentals",
+        "title" : "Web Fundamentals",
+        "credits" : 2,
+        "certificate" : "Web and Computer Programming",
+        "description" : "this course introduces...",
+        "stack" : "HTML, CSS"
+    },
+    {
+        "courseNum" : "Web Fundamentals",
+        "title" : "Web Fundamentals",
+        "credits" : 2,
+        "certificate" : "Web and Computer Programming",
+        "description" : "this course introduces...",
+        "stack" : "HTML, CSS"
+    }
+]

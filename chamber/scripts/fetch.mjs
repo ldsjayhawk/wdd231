@@ -1,10 +1,9 @@
-export async function apiFetch() {
+export async function apiFetch(source) {
     try {
-        const response = await fetch(url);
+        const response = await fetch(source);
         if (response.ok) {
             const data = await response.json();
             console.log(data)
-            // displayResults(data);
             return data
         } else {
             throw Error(await response.text());

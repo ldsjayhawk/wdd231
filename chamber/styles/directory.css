@@ -147,6 +147,13 @@ footer h4, p, a {
     color: #000;
 } */
 
+.selection {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 0;
+}
+
 .selection ul {
     display: flex;
     flex-direction: row;
@@ -192,11 +199,13 @@ footer h4, p, a {
 #membercard {
     border-color: #fff; 
     max-width: 300px;
+    gap: 20px;
 }
 
 .member {   
     background-color: #DAF7FF;
     padding: 10px;
+    margin-bottom: 20px;
     box-shadow: 0 0 10px #000;
 }
 

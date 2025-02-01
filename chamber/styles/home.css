@@ -240,3 +240,30 @@ figcaption {
     padding-bottom: 10px;
 }
 
+.card {
+    display: grid;
+    padding: 10px;
+    align-items: stretch;
+    justify-content: center;
+    text-align: center; /* Center text in each item */
+    grid-template-columns: auto;
+}
+
+#membercard {
+    border-color: #fff; 
+    max-width: 300px;
+}
+
+.member {   
+    background-color: #DAF7FF;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px #000;
+}
+
+.member img {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 0 10px #646464;
+    margin: 10px;
+}

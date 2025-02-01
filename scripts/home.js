@@ -32,7 +32,7 @@ const courses = [
         description: 'This course introduces students to the World Wide Web and to careers in web site design and development. The course is hands on with students actually participating in simple web designs and programming. It is anticipated that students who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.',
         technology: [
             'HTML',
-            'CSS'
+            ' CSS'
         ],
         completed: true
     },
@@ -69,8 +69,8 @@ const courses = [
         description: 'This course builds on prior experience in Web Fundamentals and programming. Students will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.',
         technology: [
             'HTML',
-            'CSS',
-            'JavaScript'
+            ' CSS',
+            ' JavaScript'
         ],
         completed: true
     },
@@ -83,8 +83,8 @@ const courses = [
         description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
         technology: [
             'HTML',
-            'CSS',
-            'JavaScript'
+            ' CSS',
+            ' JavaScript'
         ],
         completed: false
     }
@@ -141,6 +141,56 @@ wdd.addEventListener("click", () => {
 const all = document.querySelector("#all")
 all.addEventListener("click", () => {
     createCourseCard(courses);
+});
+
+// fetch json data
+// async function getCourses(jsonFile) {
+//     try {
+//         const response = await fetch(jsonFile)
+//         // wait for response
+//         if (response.ok) {
+//             // wait for json
+//             const data = await response.json();
+//             console.log(data)
+//             displayCourses(data);
+//         } else {
+//             throw Error(await response.text());
+//         }
+//     } catch (error) {
+//             console.log("Error retreiving data", error);
+//         }
+// }
+
+function displayModal(courses) {
+    courses.forEach(course =>  {
+        courseModal.innerHTML = ''     
+        courseModal.innerHTML =
+        `<div class="courseModal">
+        <h3>${course.subject} ${course.number}</h3>
+        <h4>${course.title}</h4>
+        <p>Credits: ${course.credits}</p>
+        <p>Certificate: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p>Technology: ${course.technology}</p>
+        </div>`
+        }
+    );
+}
+
+// modal
+const dialog = document.querySelector("dialog");
+const show = document.querySelector("#coursecard");
+const close = document.querySelector("#closebutton");
+
+// "Show the dialog" button opens the dialog modally
+show.addEventListener("click", () => {
+  dialog.showModal();
+  displayModal(courses);
+});
+
+// "Close" button closes the dialog
+close.addEventListener("click", () => {
+  dialog.close();
 });
 
 // copyright year

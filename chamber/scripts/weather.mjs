@@ -18,7 +18,6 @@ export async function apiFetch() {
             const data = await response.json();
             console.log(data)
             displayResults(data);
-            return data
         } else {
             throw Error(await response.text());
         }

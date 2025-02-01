@@ -1,58 +1,86 @@
-// import statements
-// import { apiFetch } from "./weather.mjs";
-// import { forecastFetch } from "./forecast.mjs";
 import { copyrightYear, lastModifiedDate } from "./footer.mjs";
-// import { hamburgerMenu } from "./menu.mjs";
 
+// responsive menu
+const hamburger = document.querySelector('#menu');
+const navigation = document.querySelector('.navigation');
 
-// get member data
+hamburger.addEventListener('click', () => {
+    navigation.classList.toggle('open');
+    hamburger.classList.toggle('open');
+});
+
+// variables for grid - list toggle
+const grid = document.querySelector("#grid");
+const list = document.querySelector("#list");
 const jsonFile = 'data/members.json';
-const membercard = document.getElementById('membercard');
-let memberdata = [];
+let data = [];
 
-async function getMemberData(jsonFile) {
+const membercard = document.querySelector("membercard");
+
+// get data from the json file
+export async function apiFetch(jsonfile) {
     try {
-        const response = await fetch(jsonFile)
-        // wait for response
+        const response = await fetch(jsonfile);
         if (response.ok) {
-            // wait for json
             const data = await response.json();
             console.log(data)
-            memberdata = data;
-            displayMembers(memberdata, "grid");
+            return data
         } else {
             throw Error(await response.text());
         }
     } catch (error) {
             console.log("Error retreiving data", error);
-        }
-}
+            }
+    }
 
-function displayMembers(data) {
+function displayGrid(data) {
     data.forEach(member =>  {
-        membercard.innerHTML +=             
-        `<div class="member">
-        <h3>${member.company}</h3>
-        <img src="${member.image}" alt="company logo" width="100" height="auto">
-        <h4>Email: ${member.email}</p>
-        <h4>Phone: ${member.phone}</p>
-        <h4>${member.url}</p>
-        </div>`
-        } 
-    );
+        membercard.innerHTML = "";
+        const divElement = document.createElement("div")
+        divElement.classList.add("member")
+        // `<div class="member">
+        `<h3>${member.company}</h3>
+        <img src="${member.image}" alt="company logo" width="100" height="auto"> 
+        <h4>Address: ${member.address}</h4>
+        <h4>Phone: ${member.phone}</h4>
+        <h4>${member.url}</h4>
+        </div>`;
+        membercard.appendChild(divElement);
+    });
 }
 
-const grid = document.querySelector("#grid");
+function displayList(data) {
+    const table = document.createElement("table")
+    data.forEach(member =>  {
+        const row = document.createElement("tr")
+        row.innerHTML =
+        `<div class="member">
+        <table>
+            <tr>
+                <td><h4>${member.company}</h4></td><td><p>Address: ${member.address}</p></td><td><p>Phone: ${member.phone}</p></td><td><p>${member.url}</p></td>
+            </tr>
+        </table>
+        </div>`
+        table.appendChild(row);
+        },
+    );
+    membercard.appendChild(table);
+}
+
+// when clicking the button, go to the correct function
 grid.addEventListener("click", () => {
-    displayMembers(memberdata, "grid"); 
+	membercard.classList.add("grid");
+	membercard.classList.remove("list");
+    displayGrid(data);
 });
 
-const list = document.querySelector("#list");
 list.addEventListener("click", () => {
-    displayMembers(memberdata, "list"); 
+	membercard.classList.add("list");
+	membercard.classList.remove("grid");
+    displayList(data);
 });
+    
 
-getMemberData(jsonFile);
-// footer info
+// footer info ---------------
 copyrightYear();
 lastModifiedDate();
